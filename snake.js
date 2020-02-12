@@ -153,9 +153,9 @@ function highscores() {
             .then(response => response.text())
             .then(text => {
                 const hs = text.split('\n');
-                console.log(hs[0]);
+                console.log(hs[9]);
                 let hs1 = hs[0].split(':');
-                console.log(hs1[0]);
+                console.log("test" + hs1[0]);
                 let hs2 = hs[1].split(':');
                 let hs3 = hs[2].split(':');
                 let hs4 = hs[3].split(':');
