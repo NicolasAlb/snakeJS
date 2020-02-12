@@ -132,6 +132,10 @@ function game() {
         }
         
     } else if (life == 0) {
+        //var file = new XMLHttpRequest();
+        fetch('highscores.txt')
+            .then(response => response.text())
+            .then(text => console.log(text))
         if (typeof(Storage) !== "undefined") {
             var hs = localStorage.getItem("highscore");
             if (hs < score) {
