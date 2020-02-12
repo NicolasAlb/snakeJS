@@ -18,3 +18,175 @@
     font-size: 20px;
     padding-left: 10px;
 }
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .bestscore-container {
+    position: absolute;
+    right: 8%;
+    top: 40%;
+}
+
+.button {
+  background-color: lightcoral;
+  font-size: 1em;
+  padding: 10px;
+  color: red;
+  border: 2px solid red;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #2c3e50;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-title {
+    color: rgb(221, 171, 7);
+    font-size: 100px;
+}
+
+.second-title {
+    color: rgb(90, 88, 88);
+    font-size: 60px;
+    padding-left: 10px;
+}
+
+.third-title {
+    color: rgb(202, 134, 8);
+    font-size: 40px;
+    padding-left: 14px;
+}
+
+.ten-title {
+    font-size: 20px;
+    padding-left: 12px;
+    padding-top: 10px;
+}
+
+.hs-title {
+    font-size: 20px;
+    padding-left: 18px;
+    padding-top: 10px;
+}
+
+.first-highscore {
+    color: rgb(221, 171, 7);
+    font-size: 50px;
+    padding-left: 10%;
+    padding-top: 7%;
+}
+
+.second-highscore {
+    color: rgb(90, 88, 88);
+    font-size: 30px;
+    padding-left: 23%;
+    padding-top: 4%;
+}
+
+.third-highscore {
+    color: rgb(202, 134, 8);
+    font-size: 20px;
+    padding-left: 25%;
+    padding-top: 2%;
+}
+
+.first-highscorename {
+    color: rgb(221, 171, 7);
+    font-size: 50px;
+    padding-left: 20%;
+    padding-top: 7%;
+}
+
+.second-highscorename {
+    color: rgb(90, 88, 88);
+    font-size: 30px;
+    padding-left: 23%;
+    padding-top: 4%;
+}
+
+.third-highscorename {
+    color: rgb(202, 134, 8);
+    font-size: 20px;
+    padding-left: 25%;
+    padding-top: 2%;
+}
+
+.highscorename {
+    font-size: 20px;
+    padding-left: 27%;
+    padding-top: 10px;
+}
+
+.highscore {
+    font-size: 20px;
+    padding-left: 27%;
+    padding-top: 10px;
+}
