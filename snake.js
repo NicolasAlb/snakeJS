@@ -28,7 +28,7 @@ radial.addColorStop(0.25, '#2c3e50');
 window.onload = function () {
     var interval = setInterval(game, 100);
     document.addEventListener("keydown", keyboard);
-    this.highscores()
+    /*this.highscores()*/
 }
 
 function game() {
@@ -144,7 +144,9 @@ function game() {
         ctx.font = '40px Arial';
         ctx.fillStyle = '#fff';
         ctx.fillText('GAME OVER', canvas.width / 2 - 130, canvas.height / 2);
-        clearTimeout(interval);
+        if (interval) {
+            clearTimeout(interval);
+        }
     }
 }
 
