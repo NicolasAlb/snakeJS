@@ -150,17 +150,12 @@ function game() {
     }
 }
 
-function popuploaded() {
-    window.opener.callback(document);
- }
-
-
-window.callback = function(doc) {
+window.addEventListener('DOMContentLoaded', (event) => {
     this.console.log("okok");
     document.getElementById("first-highscorename").innerHTML = "PUTE";
     document.getElementById("first-highscore").innerHTML = "PUPUTE";
-}
-
+    console.log('DOM fully loaded and parsed');
+});
 
 function highscores() {
     fetch('highscores.txt')
