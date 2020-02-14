@@ -20,6 +20,7 @@ var collisiontrace = false;
 var speed = 100;
 var level = 1;
 var sizelevel = 50;
+var playerName = "Unknown";
 
 
 radial.addColorStop(0, '#34495e');
@@ -134,7 +135,6 @@ function game() {
         }
         
     } else if (life == 0) {
-        //var file = new XMLHttpRequest();
         if (typeof(Storage) !== "undefined") {
             var hs = localStorage.getItem("highscore");
             if (hs < score) {
@@ -147,7 +147,107 @@ function game() {
         if (interval) {
             clearTimeout(interval);
         }
+        this.saveHS(score);
     }
+}
+
+function setPlayerName() {
+    var pn = document.getElementById("highscore-pseudo").value;
+    playerName = pn;
+    console.log(playerName);
+}
+
+function saveHS(score) {
+    fetch('highscores.txt')
+            .then(response => response.text())
+            .then(text => {
+                const hs = text.split('\n');
+                console.log(hs[9]);
+                let hs1 = hs[0].split(':');
+                let hs2 = hs[1].split(':');
+                let hs3 = hs[2].split(':');
+                let hs4 = hs[3].split(':');
+                let hs5 = hs[4].split(':');
+                let hs6 = hs[5].split(':');
+                let hs7 = hs[6].split(':');
+                let hs8 = hs[7].split(':');
+                let hs9 = hs[8].split(':');
+                let hs10 = hs[9].split(':');
+                if (score > hs1[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = hs6[1];
+                    hs6[1] = hs5[1];
+                    hs5[1] = hs4[1];
+                    hs4[1] = hs3[1];
+                    hs3[1] = hs2[1];
+                    hs2[1] = hs1[1];
+                    hs1[1] = score;
+                } else if (score > hs2[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = hs6[1];
+                    hs6[1] = hs5[1];
+                    hs5[1] = hs4[1];
+                    hs4[1] = hs3[1];
+                    hs3[1] = hs2[1];
+                    hs2[1] = score;
+                }
+                else if (score > hs3[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = hs6[1];
+                    hs6[1] = hs5[1];
+                    hs5[1] = hs4[1];
+                    hs4[1] = hs3[1];
+                    hs3[1] = score;
+                }
+                else if (score > hs4[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = hs6[1];
+                    hs6[1] = hs5[1];
+                    hs5[1] = hs4[1];
+                    hs4[1] = score;
+                }
+                else if (score > hs5[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = hs6[1];
+                    hs6[1] = hs5[1];
+                    hs5[1] = score;
+                }
+                else if (score > hs6[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = hs6[1];
+                    hs6[1] = score;
+                }
+                else if (score > hs7[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = hs7[1];
+                    hs7[1] = score;
+                }
+                else if (score > hs8[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = hs8[1];
+                    hs8[1] = score;
+                }
+                else if (score > hs9[1]) {
+                    hs10[1] = hs9[1];
+                    hs9[1] = score;
+                }
+                else if (score > hs10[1]) {
+                    hs10[1] = score;
+                }
+            })
 }
 
 function highscores() {
