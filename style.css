@@ -84,18 +84,19 @@
 }
 
 .button {
-  background-color: lightcoral;
-  font-size: 1em;
-  padding: 10px;
-  color: red;
-  border: 2px solid red;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
+    background-color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    color: #2c3e50;
+    border: 5px solid #2c3e50;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 .button:hover {
-  background: #2c3e50;
+    background: lightcyan;
+    color: chocolate;
 }
 
 .flex-row {
