@@ -148,6 +148,10 @@ function game() {
     }
 }
 
+function popuploaded() {
+    window.opener.callback(document);
+ }
+
 function highscores() {
     fetch('highscores.txt')
             .then(response => response.text())
@@ -165,26 +169,28 @@ function highscores() {
                 let hs8 = hs[7].split(':');
                 let hs9 = hs[8].split(':');
                 let hs10 = hs[9].split(':');
-                document.getElementById("first-highscorename").innerHTML = hs1[0];
-                document.getElementById("first-highscore").innerHTML = hs1[1];
-                document.getElementById("second-highscorename").innerHTML = hs2[0];
-                document.getElementById("second-highscore").innerHTML = hs2[1];
-                document.getElementById("third-highscorename").innerHTML = hs3[0];
-                document.getElementById("third-highscore").innerHTML = hs3[1];
-                document.getElementById("fourhs").innerHTML = hs4[0];
-                document.getElementById("fourhsn").innerHTML = hs4[1];
-                document.getElementById("fivehs").innerHTML = hs5[0];
-                document.getElementById("fivehsn").innerHTML = hs5[1];
-                document.getElementById("sixhs").innerHTML = hs6[0];
-                document.getElementById("sixhsn").innerHTML = hs6[1];
-                document.getElementById("sevenhs").innerHTML = hs7[0];
-                document.getElementById("sevenhsn").innerHTML = hs7[1];
-                document.getElementById("eighths").innerHTML = hs8[0];
-                document.getElementById("eighthsn").innerHTML = hs8[1];
-                document.getElementById("ninehs").innerHTML = hs9[0];
-                document.getElementById("ninehsn").innerHTML = hs9[1];
-                document.getElementById("tenhs").innerHTML = hs10[0];
-                document.getElementById("tenhsn").innerHTML = hs10[1];
+                window.callback = function(document) {
+                    document.getElementById("first-highscorename").innerHTML = hs1[0];
+                    document.getElementById("first-highscore").innerHTML = hs1[1];
+                    document.getElementById("second-highscorename").innerHTML = hs2[0];
+                    document.getElementById("second-highscore").innerHTML = hs2[1];
+                    document.getElementById("third-highscorename").innerHTML = hs3[0];
+                    document.getElementById("third-highscore").innerHTML = hs3[1];
+                    document.getElementById("fourhs").innerHTML = hs4[0];
+                    document.getElementById("fourhsn").innerHTML = hs4[1];
+                    document.getElementById("fivehs").innerHTML = hs5[0];
+                    document.getElementById("fivehsn").innerHTML = hs5[1];
+                    document.getElementById("sixhs").innerHTML = hs6[0];
+                    document.getElementById("sixhsn").innerHTML = hs6[1];
+                    document.getElementById("sevenhs").innerHTML = hs7[0];
+                    document.getElementById("sevenhsn").innerHTML = hs7[1];
+                    document.getElementById("eighths").innerHTML = hs8[0];
+                    document.getElementById("eighthsn").innerHTML = hs8[1];
+                    document.getElementById("ninehs").innerHTML = hs9[0];
+                    document.getElementById("ninehsn").innerHTML = hs9[1];
+                    document.getElementById("tenhs").innerHTML = hs10[0];
+                    document.getElementById("tenhsn").innerHTML = hs10[1];
+                }
             })
 }
 
