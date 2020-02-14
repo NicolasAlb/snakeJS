@@ -10,10 +10,12 @@
             <div id="highscore"></div>
         </div>
         <div class="bestscore-container">
-            <label for="highscore-pseudo">Pseudo</label>
-            <input type="text" id="highscore-pseudo" name="highscore-pseudo" placeholder="Rentrez votre pseudo">
-            <button class="button" onclick="setPlayerName()"></button>
-            <a class="button" href="#highscores">Let me Pop up</a>
+            <div class="flex-column">
+                <label for="highscore-pseudo">Pseudo</label>
+                <input type="text" id="highscore-pseudo" name="highscore-pseudo" placeholder="Rentrez votre pseudo">
+                <button class="button" onclick="setPlayerName()">Enregistrer</button>
+                <a class="button" href="#highscores">Let me Pop up</a>
+            </div>
         </div>
         <div id="highscores" class="overlay">
             <div class="popup" >
