@@ -173,20 +173,20 @@ function highscores() {
                 document.getElementById("secondhs").innerHTML = hs2[1];
                 document.getElementById("thirdhsn").innerHTML = hs3[0];
                 document.getElementById("thirdhs").innerHTML = hs3[1];
-                document.getElementById("fourhs").innerHTML = hs4[0];
-                document.getElementById("fourhsn").innerHTML = hs4[1];
-                document.getElementById("fivehs").innerHTML = hs5[0];
-                document.getElementById("fivehsn").innerHTML = hs5[1];
-                document.getElementById("sixhs").innerHTML = hs6[0];
-                document.getElementById("sixhsn").innerHTML = hs6[1];
-                document.getElementById("sevenhs").innerHTML = hs7[0];
-                document.getElementById("sevenhsn").innerHTML = hs7[1];
-                document.getElementById("eighths").innerHTML = hs8[0];
-                document.getElementById("eighthsn").innerHTML = hs8[1];
-                document.getElementById("ninehs").innerHTML = hs9[0];
-                document.getElementById("ninehsn").innerHTML = hs9[1];
-                document.getElementById("tenhs").innerHTML = hs10[0];
-                document.getElementById("tenhsn").innerHTML = hs10[1];
+                document.getElementById("fourhsn").innerHTML = hs4[0];
+                document.getElementById("fourhs").innerHTML = hs4[1];
+                document.getElementById("fivehsn").innerHTML = hs5[0];
+                document.getElementById("fivehs").innerHTML = hs5[1];
+                document.getElementById("sixhsn").innerHTML = hs6[0];
+                document.getElementById("sixhs").innerHTML = hs6[1];
+                document.getElementById("sevenhsn").innerHTML = hs7[0];
+                document.getElementById("sevenhs").innerHTML = hs7[1];
+                document.getElementById("eighthsn").innerHTML = hs8[0];
+                document.getElementById("eighths").innerHTML = hs8[1];
+                document.getElementById("ninehsn").innerHTML = hs9[0];
+                document.getElementById("ninehs").innerHTML = hs9[1];
+                document.getElementById("tenhsn").innerHTML = hs10[0];
+                document.getElementById("tenhs").innerHTML = hs10[1];
             })
 }
 
