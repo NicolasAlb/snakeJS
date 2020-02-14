@@ -21,6 +21,7 @@ var speed = 100;
 var level = 1;
 var sizelevel = 50;
 var playerName = "Unknown";
+const fs = require('fs');
 
 
 radial.addColorStop(0, '#34495e');
@@ -247,6 +248,21 @@ function saveHS(score) {
                 else if (score > hs10[1]) {
                     hs10[1] = score;
                 }
+            })
+            let tmphs1 = hs1[0] + ":" + hs1[1];
+            let tmphs2 = hs2[0] + ":" + hs2[1];
+            let tmphs3 = hs3[0] + ":" + hs3[1];
+            let tmphs4 = hs4[0] + ":" + hs4[1];
+            let tmphs5 = hs5[0] + ":" + hs5[1];
+            let tmphs6 = hs6[0] + ":" + hs6[1];
+            let tmphs7 = hs7[0] + ":" + hs7[1];
+            let tmphs8 = hs8[0] + ":" + hs8[1];
+            let tmphs9 = hs9[0] + ":" + hs9[1];
+            let tmphs10 = hs10[0] + ":" + hs10[1];
+            let newhs = tmphs1 + "\n" + tmphs2 + "\n" + tmphs3 + "\n" + tmphs4 + "\n" + tmphs5 + "\n" + tmphs6 + "\n" + tmphs7 + "\n" + tmphs8 + "\n" + tmphs9 + "\n" + tmphs10 + "\n"
+            console.log(newhs);
+            fs.writeFile('highscores.txt', newhs, (err) => {
+                if (err) throw err;
             })
 }
 
