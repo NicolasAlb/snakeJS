@@ -169,7 +169,7 @@ function highscores() {
                 const hs = text.split('\n');
                 console.log(hs[9]);
                 let hs1 = hs[0].split(':');
-                console.log("test" + hs1[0]);
+                console.log("tesdsst " + hs1[0]);
                 let hs2 = hs[1].split(':');
                 let hs3 = hs[2].split(':');
                 let hs4 = hs[3].split(':');
