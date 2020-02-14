@@ -174,13 +174,12 @@ function highscores() {
                 let hs8 = hs[7].split(':');
                 let hs9 = hs[8].split(':');
                 let hs10 = hs[9].split(':');
-                
-                document.getElementById("first-highscorename").innerHTML = hs1[0];
-                document.getElementById("first-highscore").innerHTML = hs1[1];
-                document.getElementById("second-highscorename").innerHTML = hs2[0];
-                document.getElementById("second-highscore").innerHTML = hs2[1];
-                document.getElementById("third-highscorename").innerHTML = hs3[0];
-                document.getElementById("third-highscore").innerHTML = hs3[1];
+                document.getElementById("firsthsn").innerHTML = hs1[0];
+                document.getElementById("firsths").innerHTML = hs1[1];
+                document.getElementById("secondhsn").innerHTML = hs2[0];
+                document.getElementById("secondhs").innerHTML = hs2[1];
+                document.getElementById("thirdhsn").innerHTML = hs3[0];
+                document.getElementById("thirdhs").innerHTML = hs3[1];
                 document.getElementById("fourhs").innerHTML = hs4[0];
                 document.getElementById("fourhsn").innerHTML = hs4[1];
                 document.getElementById("fivehs").innerHTML = hs5[0];
