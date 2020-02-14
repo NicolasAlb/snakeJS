@@ -28,7 +28,7 @@ radial.addColorStop(0.25, '#2c3e50');
 window.onload = function () {
     var interval = setInterval(game, 100);
     document.addEventListener("keydown", keyboard);
-    /*this.highscores()*/
+    this.highscores()
 }
 
 function game() {
@@ -149,13 +149,6 @@ function game() {
         }
     }
 }
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    this.console.log("okok");
-    document.getElementById("first-highscorename").value = "PUTE";
-    document.getElementById("first-highscore").innerHTML = "PUPUTE";
-    console.log('DOM fully loaded and parsed');
-});
 
 function highscores() {
     fetch('highscores.txt')
